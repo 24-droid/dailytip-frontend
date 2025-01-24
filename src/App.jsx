@@ -1,11 +1,11 @@
+import Signup from './Signup'
 
-import './App.css'
 
 function App() {
 
   return (
     <>
-     <h1>Let's Go</h1>
+     <Signup />
     </>
   )
 }
