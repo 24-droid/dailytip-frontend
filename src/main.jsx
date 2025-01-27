@@ -8,9 +8,7 @@ import { Provider } from "@/components/ui/provider"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider>
-    <BrowserRouter>
       <App />
-    </BrowserRouter>
     </Provider>
   </StrictMode>,
 )

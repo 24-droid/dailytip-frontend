@@ -1,11 +1,12 @@
 import React from "react";
-import { PasswordInput } from "./components/ui/password-input";
+import { PasswordInput } from "./ui/password-input";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-amber-200 m-auto rounded-md">
-      <h1 className="font-[40%] text-center mb-4">Sign Up</h1>
+    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2">
+      <p className="font-[40%] text-center text-4xl mb-4">Sign Up</p>
       <form className="flex flex-col gap-4 w-[80%] ">
         <div>
           <label htmlFor="username" className="pl-4">
@@ -64,6 +65,7 @@ const Signup = () => {
         </div> 
       
       
+    </div>
     </div>
   );
 };
