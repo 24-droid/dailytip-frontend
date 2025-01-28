@@ -3,8 +3,8 @@ import { PasswordInput } from "./ui/password-input";
 const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-    <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2">
-      <p className="font-[40%] text-center text-4xl mb-4">Login</p>
+    <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2" style={{border:'2px solid black'}}>
+      <p className="font-[40%] text-center text-4xl mb-4" style={{ fontSize: '1.6rem', lineHeight: '1.2',fontFamily:'Roboto' }}>Login</p>
       <form className="flex flex-col gap-4 w-[80%] ">
         <div>
           <label htmlFor="email" className="pl-4">
@@ -16,6 +16,7 @@ const Login = () => {
             name="email"
             className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
             placeholder="abc@example.com"
+            style={{border:'2px solid black'}}
           />
         </div>
        
@@ -23,7 +24,7 @@ const Login = () => {
           <label htmlFor="password" className="pl-4">
             Password
           </label>
-          <PasswordInput />
+          <PasswordInput style={{border:'2px solid black'}}/>
         </div>
         
         <div className="flex items-center justify-center">

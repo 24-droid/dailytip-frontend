@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
-    <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2">
-      <p className="font-[40%] text-center text-4xl mb-4">Sign Up</p>
+    <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2" style={{border:'2px solid black'}}>
+      <p className="font-[40%] text-center text-4xl mb-4"style={{ fontSize: '1.6rem', lineHeight: '1.2',fontFamily:'Roboto' }}>Sign Up</p>
       <form className="flex flex-col gap-4 w-[80%] ">
         <div>
           <label htmlFor="username" className="pl-4">
@@ -18,6 +18,7 @@ const Signup = () => {
             name="username"
             className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
             placeholder="John Doe"
+            style={{border:'2px solid black'}}
           />
         </div>
         <div>
@@ -30,13 +31,14 @@ const Signup = () => {
             name="email"
             className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
             placeholder="abc@example.com"
+            style={{border:'2px solid black'}}
           />
         </div>
         <div>
           <label htmlFor="role" className="pl-4">
             Role
           </label>
-          <select htmlFor="role" className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent">
+          <select htmlFor="role" className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black'}}>
             <option value="Developer">Developer</option>
             <option value="Teacher">Teacher</option>
             <option value="Student">Student</option>
@@ -47,7 +49,7 @@ const Signup = () => {
           <label htmlFor="password" className="pl-4">
             Password
           </label>
-          <PasswordInput />
+          <PasswordInput style={{border:'2px solid black'}}/>
         </div>
         
         <div className="flex items-center justify-center">
