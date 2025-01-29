@@ -2,12 +2,14 @@ import React from 'react';
 import {  useNavigate } from 'react-router-dom';
 import Lottie from "react-lottie-player";
 import animationData from '../assets/Animation - 1738125493234.json'
+import ParticleBackground from './ParticleBackground';
 const Hero = () => {
   const navigate=useNavigate()
   return (
     <div>
-      <div className='min-h-screen z-50' style={{ paddingTop: '5%' }}>
-        <div className='flex flex-col items-center justify-center'>
+      <div className='relative min-h-screen z-50' style={{ paddingTop: '5%' }}>
+        <ParticleBackground />
+        <div className=' relative flex flex-col items-center justify-center'>
           <h1 className='font-bold text-center' style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Hi, I'm Om.</h1>
           <h1 className='text-center' style={{ fontSize: '2.1rem', lineHeight: '1.2', fontFamily: 'Roboto', fontWeight: 'bold', marginTop: '1rem' }}>Subscribe to get the tips to build the web better.</h1>
           <div>
