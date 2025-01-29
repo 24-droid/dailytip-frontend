@@ -1,6 +1,8 @@
 import React from 'react'
 import cracked from '../assets/cracked.png';
+import { Navigate, useNavigate } from 'react-router-dom';
 const Navbar = () => {
+  const navigate=useNavigate()
   return (
     <div className="w-full h-20 bg-black top-0 left-0 right-0 z-100">
     <nav className="h-full flex items-center justify-center gap-[50%] px-6">

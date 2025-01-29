@@ -1,5 +1,6 @@
 import React from 'react'
 import { PasswordInput } from "./ui/password-input";
+import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -34,6 +35,12 @@ const Login = () => {
           </button>
         </div>
         </div>
+        <div className="flex gap-2 items-center justify-center pt-4">
+      <p className="text-gray-700">Don't have  an account?{" "}
+        </p>
+        <Link to="/signup" className="text-white hover:opacity-40 underline">Signup Here</Link> 
+        </div> 
+      
       </form>
       
       
