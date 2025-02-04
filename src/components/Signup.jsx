@@ -1,13 +1,50 @@
-import React from "react";
+import React,{useState} from "react";
 import { PasswordInput } from "./ui/password-input";
-import { Link } from "react-router-dom";
-
+import { Link,useNavigate } from "react-router-dom";
+import { nav } from "framer-motion/client";
 const Signup = () => {
+  const [formData,setFormData]=useState({
+    username:"",
+    email:"",
+    role:"Developer",
+    password:"",
+  });
+  const [error,setError]=useState("");
+  const navigate=useNavigate();
+  const handleChange=(e)=>{
+    setFormData({...formData,[e.target.name]:e.target.value})
+  }
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    setError(""); // clears previous errors
+    try {
+      const response = await fetch("http://localhost:8000/api/v1/users/signup",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(formData)
+      });
+      const data = await response.json();
+      if(response.ok)
+        {
+          alert("Signup Successful! Redirecting to login...");
+          navigate("/login")
+        }
+        else {
+          setError(data.error || "Signup Failed");
+        }
+    } catch (error) {
+      console.error("Error while signing in:", error);
+      setError("Something went wrong! Please try again.");
+    }
+  }
   return (
     <div className="flex items-center justify-center min-h-screen">
     <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2" style={{border:'2px solid black'}}>
       <p className="font-[40%] text-center text-4xl mb-4"style={{ fontSize: '1.6rem', lineHeight: '1.2',fontFamily:'Roboto' }}>Sign Up</p>
-      <form className="flex flex-col gap-4 w-[80%] ">
+      {error && <p className="text-red-500">{error}</p>}
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[80%] ">
         <div>
           <label htmlFor="username" className="pl-4">
             Username
@@ -18,6 +55,8 @@ const Signup = () => {
             name="username"
             className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
             placeholder="John Doe"
+            onChange={handleChange}
+            value={formData.username}
             style={{border:'2px solid black'}}
           />
         </div>
@@ -31,6 +70,8 @@ const Signup = () => {
             name="email"
             className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
             placeholder="abc@example.com"
+            onChange={handleChange}
+            value={formData.email}
             style={{border:'2px solid black'}}
           />
         </div>
@@ -38,7 +79,7 @@ const Signup = () => {
           <label htmlFor="role" className="pl-4">
             Role
           </label>
-          <select htmlFor="role" className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black'}}>
+          <select htmlFor="role" onChange={handleChange} value={formData.role} className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black'}}>
             <option value="Developer">Developer</option>
             <option value="Teacher">Teacher</option>
             <option value="Student">Student</option>
@@ -49,7 +90,7 @@ const Signup = () => {
           <label htmlFor="password" className="pl-4">
             Password
           </label>
-          <PasswordInput style={{border:'2px solid black'}}/>
+          <PasswordInput name ="password" type="password" style={{border:'2px solid black'}} value={formData.password} onChange={handleChange}/>
         </div>
         
         <div className="flex items-center justify-center">
