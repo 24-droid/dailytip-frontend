@@ -1,24 +1,10 @@
-import React,{useState,useEffect}from 'react';
+import React from 'react';
 import {  useNavigate } from 'react-router-dom';
 import Lottie from "react-lottie-player";
 import animationData from '../assets/Animation - 1738125493234.json'
 import ParticleBackground from './ParticleBackground';
 const Hero = () => {
   const navigate=useNavigate()
-  const [isLoggedIn,setIsLoggedIn]=useState(false)
-  useEffect(()=>{
-    const user=localStorage.getItem("user")
-    if(user)
-      {
-        setIsLoggedIn(true)
-      }
-  },[])
-  const handleLogin=()=>{
-    if(!isLoggedIn)
-      {
-    navigate('/login')
-      }
-  }
   return (
     <div>
       <div className='relative min-h-screen z-50' style={{ paddingTop: '5%' }}>
@@ -36,7 +22,7 @@ const Hero = () => {
             </div>
           </div>
           <div style={{ marginTop: '1rem' }} className='flex'>
-            <button className='h-12 w-46 text-white p-4 rounded-sm hover:cursor-pointer' style={{ backgroundColor: '#F7272F', color: 'white', border: '2px solid black', margin: 'auto' }} onClick={handleLogin()}>{isLoggedIn ? "Thanks for Subscribing" : "Get Daily Developer Tips"}</button>
+            <button className='h-12 w-46 text-white p-4 rounded-sm hover:cursor-pointer' style={{ backgroundColor: '#F7272F', color: 'white', border: '2px solid black', margin: 'auto' }} onClick={()=>{navigate('/login')}}>Get Daily Developer Tips</button>
           </div>
           <div className='border-b-2 border-gray-500' style={{ borderBottom: '2rem', borderColor: 'gray' }}>
             <em style={{ fontStyle: 'italic', paddingLeft: '2rem', marginTop: '1rem' }} className='flex flex-wrap md:text-balance md:w-180'>The world is full of innovations, but the world of web development is still in its infancy. We are here to help you stay updated with the latest trends and developments in the field.</em>

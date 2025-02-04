@@ -9,6 +9,7 @@ const Login = () => {
   });
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,6 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(""); // Clear previous errors
+    setSuccess(""); 
 
     try {
       const response = await fetch("http://localhost:8000/api/v1/users/login", {
@@ -31,7 +33,7 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("user",JSON.stringify(data));
+        setSuccess("Thanks for subscribing!"); // Show success message
         alert("Login Successful! Redirecting...");
         navigate("/"); // Redirect to home or dashboard
       } else {
@@ -56,6 +58,7 @@ const Login = () => {
           Login
         </p>
         {error && <p className="text-red-500">{error}</p>}
+        {success && <p className="text-green-600">{success}</p>}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[80%]">
           <div>
             <label htmlFor="email" className="pl-4">
