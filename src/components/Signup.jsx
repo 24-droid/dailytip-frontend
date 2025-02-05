@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault();
     setError(""); // clears previous errors
     try {
-      const response = await fetch("http://localhost:8000/api/v1/users/signup",{
+      const response = await fetch("https://dailytip-backend.onrender.com/api/v1/users/signup",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
