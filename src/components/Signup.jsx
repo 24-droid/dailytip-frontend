@@ -79,7 +79,7 @@ const Signup = () => {
           <label htmlFor="role" className="pl-4 text-black">
             Role
           </label>
-          <select htmlFor="role" onChange={handleChange} value={formData.role} className="w-full h-12 text-black bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black'}}>
+          <select htmlFor="role" onChange={handleChange} value={formData.role} className="w-full h-12 text-black bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black', color:'black'}}>
             <option value="Developer">Developer</option>
             <option value="Teacher">Teacher</option>
             <option value="Student">Student</option>
