@@ -122,6 +122,7 @@ const Signup = () => {
               name="password"
               type="password"
               style={{ border: "2px solid black", color: "black" }}
+              className="text-black"
               value={formData.password}
               onChange={handleChange}
             />
