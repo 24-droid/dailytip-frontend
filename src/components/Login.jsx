@@ -52,7 +52,7 @@ const Login = () => {
         style={{ border: "2px solid black" }}
       >
         <p
-          className="font-[40%] text-center text-4xl mb-4"
+          className="font-[40%] text-center text-4xl mb-4 text-black"
           style={{ fontSize: "1.6rem", lineHeight: "1.2", fontFamily: "Roboto" }}
         >
           Login
@@ -61,7 +61,7 @@ const Login = () => {
         {success && <p className="text-green-600">{success}</p>}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[80%]">
           <div>
-            <label htmlFor="email" className="pl-4">
+            <label htmlFor="email" className="pl-4 text-black">
               Email
             </label>
             <input
@@ -77,7 +77,7 @@ const Login = () => {
           </div>
 
           <div>
-            <label htmlFor="password" className="pl-4">
+            <label htmlFor="password" className="pl-4 text-black">
               Password
             </label>
             <PasswordInput
@@ -97,7 +97,7 @@ const Login = () => {
           </div>
           <div className="flex gap-2 items-center justify-center pt-4">
             <p className="text-gray-700">Don't have an account?{" "}</p>
-            <Link to="/signup" className="text-white hover:opacity-40 underline">
+            <Link to="/signup" className="text-black hover:opacity-40 underline">
               Signup Here
             </Link>
           </div>
