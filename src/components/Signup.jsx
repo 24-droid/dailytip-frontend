@@ -28,7 +28,7 @@ const Signup = () => {
       const data = await response.json();
       if(response.ok)
         {
-          alert("Signup Successful! Redirecting to login...");
+          alert("Signup Successful! Redirecting to login... \n Checkout the Welcome Email 📩");
           navigate("/login")
         }
         else {
