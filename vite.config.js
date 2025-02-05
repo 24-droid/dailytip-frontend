@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     tsconfigPaths()
   ],
+  base: '/',
   server: {
     historyApiFallback: true, 
   },
