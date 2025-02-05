@@ -102,13 +102,13 @@ const Signup = () => {
               className="w-full h-12 text-black bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent appearance-none"
               style={{ border: "2px solid black", color: "black" }}
             >
-              <option value="Developer" className="text-black">
+              <option value="developer" className="text-black">
                 Developer
               </option>
-              <option value="Teacher" className="text-black">
+              <option value="teacher" className="text-black">
                 Teacher
               </option>
-              <option value="Student" className="text-black">
+              <option value="student" className="text-black">
                 Student
               </option>
             </select>
