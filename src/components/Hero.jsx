@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate=useNavigate()
   return (
     <div>
-      <div className='relative min-h-screen z-50' style={{ paddingTop: '5%' }}>
+      <div className='relative min-h-screen z-50 bg-white' style={{ paddingTop: '5%' }}>
         <ParticleBackground />
         <div className=' relative flex flex-col items-center justify-center'>
           <h1 className='font-bold text-center' style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Hi, I'm Om.</h1>

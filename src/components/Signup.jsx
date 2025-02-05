@@ -40,7 +40,7 @@ const Signup = () => {
     }
   }
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-white">
     <div className="flex flex-col items-center justify-center w-120 bg-amber-200 m-auto rounded-lg border-amber-600 border-r-2" style={{border:'2px solid black'}}>
       <p className="font-[40%] text-center text-4xl mb-4"style={{ fontSize: '1.6rem', lineHeight: '1.2',fontFamily:'Roboto' }}>Sign Up</p>
       {error && <p className="text-red-500">{error}</p>}
