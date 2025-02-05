@@ -1,1 +1,4 @@
 @import "tailwindcss";
+input {
+    color: black !important;
+  }
