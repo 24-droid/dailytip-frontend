@@ -79,7 +79,7 @@ const Signup = () => {
           <label htmlFor="role" className="pl-4 text-black">
             Role
           </label>
-          <select htmlFor="role" onChange={handleChange} value={formData.role} className="w-full h-12 text-black bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black',color:"black"}}>
+          <select htmlFor="role" onChange={handleChange} value={formData.role} className="w-full h-12 text-black bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"style={{border:'2px solid black'}}>
             <option value="Developer">Developer</option>
             <option value="Teacher">Teacher</option>
             <option value="Student">Student</option>
@@ -95,7 +95,7 @@ const Signup = () => {
         
         <div className="flex items-center justify-center">
         <div className="flex items-center justify-center w-30 h-10 rounded-lg drop-shadow-lg  bg-blue-400 border-black">
-          <button type="submit" className=" border-black border-r-2">
+          <button type="submit" className=" border-black border-r-2" style={{color:"black"}}>
              Submit
           </button>
         </div>
@@ -104,7 +104,7 @@ const Signup = () => {
       <div className="flex gap-2 items-center justify-center pt-4">
       <p className="text-gray-700">Already have an account?{" "}
         </p>
-        <Link to="/login" className="text-black hover:opacity-40 underline">Login Here</Link> 
+        <Link to="/login" className="text-black hover:opacity-40 underline" style={{color:"black"}}>Login Here</Link> 
         </div> 
       
       
