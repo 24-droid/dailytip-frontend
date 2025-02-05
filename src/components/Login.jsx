@@ -34,7 +34,7 @@ const Login = () => {
 
       if (response.ok) {
         setSuccess("Thanks for subscribing!"); // Show success message
-        alert("Login Successful! Redirecting...");
+        alert("Login Successful! Redirecting... \n Thanks for subscribing!");
         navigate("/"); // Redirect to home or dashboard
       } else {
         setError(data.error || "Invalid email or password");
