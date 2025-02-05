@@ -68,7 +68,7 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full h-12 bg-white border border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
+              className="w-full h-12 bg-white border text-black border-black rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-black-500 focus:border-transparent"
               placeholder="abc@example.com"
               style={{ border: "2px solid black" }}
               onChange={handleChange}
@@ -83,6 +83,7 @@ const Login = () => {
             <PasswordInput
               name="password"
               style={{ border: "2px solid black" }}
+              className='text-black'
               onChange={handleChange}
               value={formData.password}
             />
@@ -90,14 +91,14 @@ const Login = () => {
 
           <div className="flex items-center justify-center">
             <div className="flex items-center justify-center w-30 h-10 rounded-lg drop-shadow-lg bg-blue-400 border-black">
-              <button type="submit" className="border-black border-r-2">
+              <button type="submit" className="border-black border-r-2 text-black">
                 Submit
               </button>
             </div>
           </div>
           <div className="flex gap-2 items-center justify-center pt-4">
             <p className="text-gray-700">Don't have an account?{" "}</p>
-            <Link to="/signup" className="text-black hover:opacity-40 underline">
+            <Link to="/signup" className="text-black hover:opacity-40 underline" style={{color:"black"}}>
               Signup Here
             </Link>
           </div>
