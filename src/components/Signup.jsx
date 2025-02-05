@@ -95,7 +95,7 @@ const Signup = () => {
         
         <div className="flex items-center justify-center">
         <div className="flex items-center justify-center w-30 h-10 rounded-lg drop-shadow-lg  bg-blue-400 border-black">
-          <button type="submit" className=" border-black border-r-2" style={{color:"black"}}>
+          <button type="submit" className=" border-black border-r-2 text-black" style={{color:"black"}}>
              Submit
           </button>
         </div>
