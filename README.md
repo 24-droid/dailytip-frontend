@@ -71,7 +71,7 @@ Frontend is deployed here: [https://dailytips.vercel.app](https://dailytips.verc
 
 ## 🔁 Related Repositories
 
-* **Backend Repo:** [dailytips-backend]((https://github.com/24-droid/dailytip-backend))
+* **Backend Repo:** [dailytips-backend](https://github.com/24-droid/dailytip-backend)
 
 ---
 
